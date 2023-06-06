@@ -1,0 +1,849 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav .nav-1,
+nav .nav-2 {
+    background-color: #fff;
+    width: 50%;
+    padding: 35px 0px 20px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .nav-1 .nav-main,
+nav .nav-2 .nav-main {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    column-gap: 50px;
+}
+
+nav .nav-2 .nav-main {
+    justify-content: center;
+}
+
+nav .nav-1 .nav-main ul,
+nav .nav-2 .nav-main ul,
+nav.mobile-menu ul {
+    list-style-type: none;
+    display: flex;
+    column-gap: 5px;
+}
+
+nav .nav-1 .nav-main ul li,
+nav .nav-2 .nav-main ul li,
+nav.mobile-menu ul li {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav .nav-1 .nav-main ul li a {
+    cursor: pointer;
+    transition: .2s background ease;
+    border-radius: 5px;
+}
+
+nav .nav-1 .nav-main ul li a:hover,
+nav.mobile-menu ul li:hover {
+    background: rgba(128, 128, 128, 0.242);
+}
+
+nav .nav-1 .nav-main ul li a,
+nav.mobile-menu ul li a {
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #959fa9;
+    padding: 10px 15px;
+}
+
+nav .nav-2 .nav-main ul li a,
+nav.mobile-menu ul li:last-child a,
+main .section-1 .section-1-1 .section-main .link-groups .link-1,
+main .section-3 .section-3-1 .section-main .link-1 {
+    background: #1d1b67;
+    color: #f0eeeb;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav .nav-1 .nav-main .nav-logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+nav .nav-2 {
+    background-color: #46ccde;
+}
+
+nav .nav-2 .nav-main .nav-mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+nav .nav-2 .nav-main .nav-mobile-menu img {
+    display: block;
+}
+
+nav.mobile-menu {
+    padding: 30px 15px;
+    background: #edededd6;
+    display: none;
+}
+
+nav.mobile-menu.active {
+    display: block;
+}
+
+nav.mobile-menu ul {
+    flex-direction: column;
+    width: 100%;
+    row-gap: 7px;
+}
+
+
+footer {
+    width: 100%;
+    padding: 50px 0px 25px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+}
+
+footer .footer-main .footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+footer .footer-main .footer-content .footer-logo {
+    width: 100%;
+}
+
+footer .footer-main .footer-content .footer-subcontent {
+    display: flex;
+    column-gap: 100px;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-1,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-2,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-3,
+footer .footer-main .footer-content .footer-subcontent .footer-newsletter .footer-newsletter-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-1 .footer-links-title,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-2 .footer-links-title,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-3 .footer-links-title,
+footer .footer-main .footer-content .footer-subcontent .footer-newsletter .footer-newsletter-main .footer-links-title {
+    font-size: 16px;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-1 .footer-links-lists,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-2 .footer-links-lists,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-3 .footer-links-lists {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-1 .footer-links-lists li a,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-2 .footer-links-lists li a,
+footer .footer-main .footer-content .footer-subcontent .footer-links .footer-links-3 .footer-links-lists li a {
+    text-decoration: none;
+    color: #4b5b6c;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-newsletter {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-newsletter .footer-newsletter-main {
+    width: 300px;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-newsletter .footer-newsletter-main .footer-newsletter-form {
+    position: relative;
+    width: 100%;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-newsletter .footer-newsletter-main .footer-newsletter-form .footer-newsletter-input {
+    width: 100%;
+    padding: 10px 134px 10px 10px;
+    font-size: 16px;
+}
+
+footer .footer-main .footer-content .footer-subcontent .footer-newsletter .footer-newsletter-main .footer-newsletter-form .footer-newsletter-button {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(-3%, -50%);
+    padding: 10px;
+    background: #1d1b67;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer .footer-main .footer-text {
+    width: 100%;
+    text-align: center;
+}
+
+footer .footer-main .footer-text p,
+footer .footer-main .footer-text a {
+    color: #4b5b6c;
+}
+
+
+main {
+    width: 100%;
+}
+
+main .section-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 0px;
+    row-gap: 50px;
+}
+main .section-4 .section-4-1, main .section-4 .section-4-2 {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+main .section-4 .section-4-1 .section-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+main .section-4 .section-4-1 .section-main h1 {
+    font-size: 40px;
+    line-height: 42px;
+    color: #1d1b67;
+    text-align: center;
+}
+main .section-4 .section-4-1 .section-main p {
+    color: #425466;
+    line-height: 24px;
+    text-align: center;
+}
+main .section-4 .section-4-2 .section-main div.pricing-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-header .pricing-checkbox {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-header .pricing-checkbox span {
+    font-size: 14px;
+    color: #425466;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-header .pricing-checkbox>div {
+    width: 45px;
+    background: #1d1b67;
+    height: 24px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-header .pricing-checkbox>div div {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-header .pricing-checkbox>div.anually div {
+    left: unset;
+    right: 3px;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div {
+    display: none;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div {
+    display: flex;
+    column-gap: 17px;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card {
+    padding: 25px;
+    border-radius: 8px;
+    width: 280px;
+    position: relative;
+    border: 1px solid #b5b6b87d;
+    box-shadow: 1px 1px #b5b6b86e;
+    height: fit-content;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-header .card-price {
+    font-size: 26px;
+}
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-header .card-price span {
+    font-size: 14px;
+    color: darkgray;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-header p {
+    color: #425466;
+    line-height: 24px;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-body {
+    padding-top: 25px;
+    border-top: 1px solid lightgray;
+    margin-top: 15px;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-body ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-body ul li {
+    color: #b5b6b8;
+    position: relative;
+    font-size: 14px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-body ul li img {
+    width: 20px;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-body ul li::before {
+    color: #1d1b67;
+    font-weight: bold;
+    width: 20px;
+    margin-left: -18px;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card .card-footer a {
+    background: #1d1b67;
+    color: #f0eeeb;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card:nth-of-type(2) .card-footer button {
+    background: #1d1b67;
+    color: #fff;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card:nth-of-type(2) .card-footer button:hover {
+    background: transparent;
+    color: #b5b6b8;
+}
+
+main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div.active {
+    display: block;
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    nav .nav-1 .nav-main {
+        column-gap: 20px;
+    }
+
+    nav .nav-1 .nav-main,
+    nav .nav-2 .nav-main {
+        width: 90%;
+    }
+
+
+    footer .footer-main {
+        width: 90%;
+    }
+
+    footer .footer-main .footer-content .footer-subcontent {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer .footer-main .footer-content .footer-subcontent .footer-links,
+    footer .footer-main .footer-content .footer-subcontent .footer-newsletter {
+        width: 100%;
+    }
+
+    footer .footer-main .footer-content .footer-subcontent .footer-newsletter {
+        justify-content: flex-start;
+    }
+
+
+
+
+    main .section-4 {
+        padding: 65px 0px 35px 0px;
+    }
+    main .section-4 .section-4-1, main .section-4 .section-4-2 {
+        width: 90%;
+    }
+    main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card {
+        width: calc(50% - 10px);
+        height: unset;
+    }
+    main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card:last-child {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav .nav-2 .nav-main .nav-mobile-menu {
+        display: block;
+    }
+
+    nav .nav-1 .nav-main ul,
+    nav .nav-2 .nav-main ul {
+        display: none;
+    }
+
+    nav .nav-2 {
+        justify-content: flex-start;
+    }
+
+    nav .nav-2 .nav-main {
+        justify-content: flex-end;
+    }
+
+
+    main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>div>div .card {
+        width: 100%;
+        height: fit-content;
+    }
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MEDICARE-Virtual medical care</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>MEDICARE</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="login.html" class="nav-item nav-link">Login</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                                <a href="team.html" class="dropdown-item">The Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="appointment.html" class="dropdown-item">Appointment</a>
+                                <a href="search.html" class="dropdown-item">Search</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Medicare</h5>
+                    <h1 class="display-1 text-white mb-md-4">your virtual medicare partner</h1>
+                    <div class="pt-2">
+                        <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Find Doctor</a>
+                        <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+<main>
+    
+    <section class="section-4">
+        <div class="section-4-1">
+            <div class="section-main">
+                <h1>Flexible Plans for Everyone</h1>
+                <p>Our plans are made for eveyone. Whether you're just starting out on social media, or have been on there for a long time, we have a plan that's right for you.</p>
+            </div>
+        </div>
+        <div class="section-4-2">
+            <div class="section-main">
+                <div class="pricing-body">
+                    <div class="pricing-body-header">
+                        <div class="pricing-checkbox">
+                            <span for="pricing__monthly">Billed Monthly</span>
+                            <div id="custom-checkbox">
+                                <div class="annual"></div>
+                            </div>
+                            <span for="pricing__anually">Billed Anually</span>
+                        </div>
+                    </div>
+                    <div class="pricing-body-plans">
+    
+                        <div class="active" id="pricing__monthly__plan">
+                            <div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-price">$4<span>/mo</span></h2>
+                                        <p>Perfect plan if you're just starting out.</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#">Subscribe Now</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-price">$12<span>/mo</span></h2>
+                                        <p>Perfect plan if you're a heavy user of social media.</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Instagram Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#">Subscribe Now</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-price">$7<span>/mo</span></h2>
+                                        <p>Perfect plan if you're just starting out.</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#">Subscribe Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pricing__anually__plan">
+                            <div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-price">$50</h2>
+                                        <p>Perfect plan if you're just starting out.</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#">Subscribe Now</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-price">$140</h2>
+                                        <p>Perfect plan if you're a heavy user of social media.</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Instagram Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#">Subscribe Now</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-price">$70</h2>
+                                        <p>Perfect plan if you're just starting out.</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                            <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#">Subscribe Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
+                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Newsletter</h4>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+<script>
+    const navEl = document.getElementById("nav-mobile-menu");
+const nav = document.getElementsByTagName("nav");
+
+navEl.addEventListener("click", () => {
+    nav[1].classList.toggle("active");
+});
+
+const planBtn = document.getElementById("custom-checkbox");
+const plans = document.querySelectorAll(".pricing-body-plans > div");
+
+planBtn.addEventListener("click", function() {
+    this.classList.toggle("anually");
+    plans[0].classList.toggle("active");
+    plans[1].classList.toggle("active");
+});
+</script>

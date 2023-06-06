@@ -1,4 +1,186 @@
 <!DOCTYPE html>
+<style>
+
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.clear:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+* html .clear {
+  zoom: 1;
+}
+
+*:first-child+html .clear {
+  zoom: 1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  float: left;
+}
+
+.logo a {
+  text-decoration: none;
+  display: block;
+  padding: 1.45em 20px;
+  color: #dad6d5;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  -webkit-transition: color .6s ease;
+  -moz-transition: color .6s ease;
+  -ms-transition: color .6s ease;
+  -o-transition: color .6s ease;
+  transition: color .6s ease;
+}
+
+.logo a:hover {
+  color: #c14240;
+}
+
+.search-button {
+  float: right;
+}
+
+.search-button button {
+  border: none;
+  background: transparent url('http://webdesign-finder.com/lifecoach/wp-content/themes/lifecoach/images/menu-search.png') no-repeat center center/cover;
+  padding: 1.9em 20px;
+  color: white;
+}
+
+.search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.search-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.search-popup label {
+  color: white;
+}
+
+.search-form {
+  display: block;
+  margin: 7em 4em;
+  position: relative;
+  right: -100%;
+}
+
+.form {
+  position: relative;
+}
+
+.form input {
+  outline: none;
+  border-width: 0 0 1px 0;
+  border-style: none none solid none;
+  border-color: #dad6d5;
+  background-color: transparent;
+  width: 100%;
+  padding: 1em 0;
+  color: #dad6d5;
+}
+
+.form input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.form input:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.form input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.form input:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+.form label {
+  position: absolute;
+  top: 25%;
+  right: 0;
+}
+
+.social-media {
+  list-style: none;
+  float: right;
+}
+
+.social-media li {
+  display: inline-block;
+}
+
+.social-media li a {
+  text-decoration: none;
+  display: block;
+  padding: 1.9em 15px;
+  color: #dad6d5;
+  -webkit-transition: color .6s ease;
+  -moz-transition: color .6s ease;
+  -ms-transition: color .6s ease;
+  -o-transition: color .6s ease;
+  transition: color .6s ease;
+}
+
+.social-media li a:hover {
+  color: #c14240;
+}
+
+.list {
+  list-style: none;
+  text-align: center;
+}
+
+.list li {
+  display: inline-block;
+}
+
+.list li a {
+  text-decoration: none;
+  display: block;
+  padding: 1.9em 15px;
+  color: #dad6d5;
+  text-transform: uppercase;
+  -webkit-transition: color .6s ease;
+  -moz-transition: color .6s ease;
+  -ms-transition: color .6s ease;
+  -o-transition: color .6s ease;
+  transition: color .6s ease;
+}
+
+.list li a:hover {
+  color: #c14240;
+}
+</style>
 <html lang="en">
 
 <head>
@@ -59,6 +241,7 @@
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="appointment.html" class="dropdown-item">Appointment</a>
                                 <a href="search.html" class="dropdown-item">Search</a>
+                                
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -78,15 +261,28 @@
                     <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Medicare</h5>
                     <h1 class="display-1 text-white mb-md-4">your virtual medicare partner</h1>
                     <div class="pt-2">
-                        <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Find Doctor</a>
-                        <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
+                       
+                            <button id="search"class="btn btn-light rounded-pill">Find Doctor</button>
+                            <div class="search-popup">
+                              <div class="search-bg"></div>
+                              <div class="search-form">
+                                <form action="">
+                                  <div class="form">
+                                    <input type="text" id="search" placeholder="input search string and hit enter">
+                                    <label for="search"><i class="fa fa-search"></i></label>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                        
+                        <!-- <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2" id="">Find Doctor</a> -->
+                        <a href="reg.html" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Registration</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Hero End -->
-
 
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -176,7 +372,7 @@
                         </div>
                         <h4 class="mb-3">Health Advices</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="chat.html">
+                        <a class="btn btn-lg btn-primary rounded-pill" href="cart.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -203,7 +399,7 @@
                         </div>
                         <h4 class="mb-3">Medicine & Pharmacy</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill" href="cart.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -215,7 +411,7 @@
                         </div>
                         <h4 class="mb-3">Lab Testing</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill" href="subsc.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -686,6 +882,17 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+$('#search').click(function() {
+  $('.search-form').animate({right: 0}, 50);
+  $('.search-popup').show();
+  $('.search-bg').click(function() {
+    $('.search-popup').hide();
+    $('.search-form').animate({right: '-100%'}, 50);
+  });
+});
+
+    </script>
 </body>
 
 </html>
